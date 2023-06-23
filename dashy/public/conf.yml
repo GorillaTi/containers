@@ -1,0 +1,57 @@
+appConfig:
+  theme: colorful
+  layout: auto
+  iconSize: large
+  language: es
+pageInfo:
+  title: Home Lab
+  description: Welcome to your Home Lab!
+  navLinks:
+    - title: GitLab
+      path: https://gitlab.chuquisaca.gob.bo
+    - title: Chat
+      path: https://chat.chuquisaca.gob.bo
+  footerText: ''
+sections:
+  - name: Sistemas Internos
+    icon: fas fa-rocket
+    items:
+      - title: Chaski
+        description: Developement a project management link for Dashy
+        icon: fas fa-mailbox
+        url: https://chaski.chuquisaca.gob.bo/
+        target: newtab
+        statusCheckUrl: https://chaski.chuquisaca.gob.bo/
+        id: 0_1723_chaski
+      - title: Pagos
+        description: Sistema de Seguimiento de Pagos
+        url: https://pagos.chuquisaca.gob.bo
+        target: newtab
+        statusCheckUrl: https://pagos.chuquisaca.gob.bo
+        id: 1_1723_pagos
+  - name: Aplicaciones
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Pagos
+        description: Sistema de Pagos
+        url: http://192.168.200.54
+        target: modal
+        statusCheck: true
+        id: 0_1227_pagos
+      - title: SIRET
+        description: Sistema Informatico de Registro de Empleo Temporal
+        url: http://192.168.200.160
+        target: modal
+        statusCheck: true
+        id: 1_1227_siret
+      - title: Test
+        description: Servidor de Pruebas
+        url: http://192.168.200.51
+        target: clipboard
+        statusCheck: true
+        id: 2_1227_test
