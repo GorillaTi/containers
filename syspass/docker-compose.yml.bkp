@@ -1,0 +1,14 @@
+version: '2.1'
+services:
+  spw01:
+    container_name: syspass-app
+    image: 'syspass/syspass:3.2.3'
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - './syspass-config:/var/www/html/sysPass/app/config'
+      - './syspass-backup:/var/www/html/sysPass/app/backup'
+    environment:
+      - USE_SSL=yes
