@@ -1,0 +1,18 @@
+version: '3.3'
+services:
+    pt-agent:
+        container_name: pt_edge_agent
+        image: portainer/agent:2.18.3
+        restart: always
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+            - /var/lib/docker/volumes:/var/lib/docker/volumes
+            - /:/host
+            - portainer_agent_data:/data
+        environment:
+            - EDGE=1
+            - EDGE_ID=3f89355b-5d6d-4a4a-a6ff-fc7d537c3020
+            - EDGE_KEY=aHR0cDovLzE5Mi4xNjguMjAwLjI0Njo5MDAwfDE5Mi4xNjguMjAwLjI0Njo4MDAwfDY1OjA4OjM5OjAwOmFiOjAwOjljOjU0OmY4OjA3OmYxOjljOmMyOjMyOjlkOmQ3fDM
+            - EDGE_INSECURE_POLL=1
+volumes:
+    portainer_agent_data:
