@@ -1,0 +1,22 @@
+version: '3.3'
+
+services:
+  wordpress:
+    container_name: wordpress
+      #image: wordpress:'${TAGS}'
+    image: wordpress:latest
+    volumes:
+      - ./wp_data:/var/www/html
+    ports:
+      #- '${PORT}:80'
+      - 4051:80
+    restart: always
+    environment:
+      #- WORDPRESS_DB_HOST='${DB_HOST}'
+      - WORDPRESS_DB_HOST=192.168.200.63
+        #- WORDPRESS_DB_USER='${DB_USER}'
+      - WORDPRESS_DB_USER=sysadmin
+        # - WORDPRESS_DB_PASSWORD='${DB_PASS}'
+      - WORDPRESS_DB_PASSWORD=5y54Dm1*.g4dCh
+        #- WORDPRESS_DB_NAME='${DB_NAME}'
+      - WORDPRESS_DB_NAME=bd_web
