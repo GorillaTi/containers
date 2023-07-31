@@ -1,3 +1,6 @@
 [submodule "web-gadch"]
 	path = web-gadch
 	url = git@192.168.200.80:gadch/web-gadch_docker.git
+[submodule "networks-gadch"]
+	path = networks-gadch
+	url = git@192.168.200.80:gadch/networks-gadch.git
