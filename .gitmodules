@@ -4,3 +4,6 @@
 [submodule "networks-gadch"]
 	path = networks-gadch
 	url = git@192.168.200.80:gadch/networks-gadch.git
+[submodule "dashy"]
+	path = dashy
+	url = git@github.com:GorillaTi/dashy.git
