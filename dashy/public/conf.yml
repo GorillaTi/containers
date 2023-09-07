@@ -3,9 +3,45 @@ appConfig:
   layout: auto
   iconSize: large
   language: es
+  statusCheck: true
+  statusCheckInterval: 10
+  startingView: default
+  defaultOpeningMethod: newtab
+  faviconApi: allesedv
+  routingMode: history
+  enableMultiTasking: false
+  widgetsAlwaysUseProxy: false
+  webSearch:
+    disableWebSearch: false
+    searchEngine: duckduckgo
+    openingMethod: newtab
+    searchBangs: {}
+  enableFontAwesome: true
+  enableMaterialDesignIcons: true
+  hideComponents:
+    hideHeading: false
+    hideNav: false
+    hideSearch: false
+    hideSettings: false
+    hideFooter: false
+  auth:
+    enableGuestAccess: false
+    users: []
+    enableKeycloak: false
+  showSplashScreen: false
+  preventWriteToDisk: false
+  preventLocalSave: false
+  disableConfiguration: false
+  disableConfigurationForNonAdmin: false
+  allowConfigEdit: true
+  enableServiceWorker: false
+  disableContextMenu: false
+  disableUpdateChecks: false
+  disableSmartSort: false
+  enableErrorReporting: false
 pageInfo:
-  title: Home Lab
-  description: Welcome to your Home Lab!
+  title: APPs GADCH
+  description: Bienvenido a las Aplicaciones del GADCH
   navLinks:
     - title: GitLab
       path: https://gitlab.chuquisaca.gob.bo
@@ -13,45 +49,237 @@ pageInfo:
       path: https://chat.chuquisaca.gob.bo
   footerText: ''
 sections:
-  - name: Sistemas Internos
+  - name: DeSecOps
+    displayData:
+      sortBy: alphabetical
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: adminer
+        description: Administrador de Bases de Datos
+        icon: hl-adminer
+        url: http://192.168.200.52/dbadmin
+        target: newtab
+        statusCheck: true
+        statusCheckUrl: http://192.168.200.52/dbadmin
+        id: 0_758_adminer
+      - title: Portainer
+        description: Administrador de Contenedores
+        icon: hl-portainer
+        url: https://portainer.chuquisaca.gob.bo
+        target: newtab
+        statusCheck: true
+        statusCheckUrl: https://portainer.chuquisaca.gob.bo
+        id: 1_758_portainer
+      - title: Networks
+        description: Sistema de Gestion de Redes del GADCH
+        icon: hl-phpipam
+        url: https://redes.chuquisaca.gob.bo/net/
+        target: newtab
+        statusCheck: true
+        statusCheckUrl: https://redes.chuquisaca.gob.bo
+        id: 2_758_networks
+      - title: Cluster
+        description: Cluster Proxmox
+        icon: hl-proxmox
+        url: https://cluster.chuquisaca.gob.bo
+        target: newtab
+        statusCheck: true
+        statusCheckUrl: https://cluster.chuquisaca.gob.bo
+        id: 3_758_cluster
+      - title: Colibri
+        description: Sistema de Asistencia Remota
+        icon: hl-meshcentral
+        url: https://colibri.chuquisaca.gob.bo
+        target: newtab
+        statusCheck: true
+        statusCheckUrl: https://colibri.chuquisaca.gob.bo
+        statusCheckAllowInsecure: true
+        id: 4_758_colibri
+      - title: Correo
+        description: Sistema de Administracion del correo institucional
+        icon: hl-zohomail
+        url: https://correo.chuquisaca.gob.bo:7071/zimbraAdmin/
+        target: newtab
+        statusCheckUrl: https://correo.chuquisaca.gob.bo:7071/zimbraAdmin/
+        statusCheckAllowInsecure: true
+        id: 5_758_correo
+      - title: Password
+        description: Sistema de Gestion de Contraseñas
+        icon: fas fa-unlock
+        url: https://syspass.chuquisaca.gob.bo
+        target: newtab
+        statusCheck: true
+        statusCheckUrl: https://syspass.chuquisaca.gob.bo/auth/login
+        id: 6_758_password
+      - title: NAS
+        description: Servidor NAS
+        icon: hl-synology
+        url: http://192.168.200.200:5000
+        target: newtab
+        statusCheck: true
+        statusCheckUrl: http://192.168.200.200:5000
+        id: 7_758_nas
+      - title: Git Lab
+        description: Repositorio de aplicaciones
+        icon: hl-gitlab
+        url: https://gitlab.chuquisaca.gob.bo/
+        target: newtab
+        statusCheck: true
+        statusCheckUrl: https://gitlab.chuquisaca.gob.bo
+        statusCheckAllowInsecure: true
+        id: 8_758_gitlab
+      - title: GLPI
+        description: Sistema de Gestion de TI
+        icon: hl-glpi
+        url: http://192.168.200.56
+        target: newtab
+        statusCheck: true
+        statusCheckUrl: http://192.168.200.56
+        id: 9_758_glpi
+      - title: Wazuh
+        description: Sistema de monitoreo de Seguridad
+        icon: hl-wazuh
+        url: http://192.168.200.85
+        target: newtab
+        statusCheck: true
+        statusCheckUrl: http://192.168.200.85
+        id: 10_758_wazuh
+    icon: fas fa-regular fa-laptop-code
+  - name: APPs Test
     icon: fas fa-rocket
     items:
-      - title: Chaski
-        description: Developement a project management link for Dashy
-        icon: fas fa-mailbox
-        url: https://chaski.chuquisaca.gob.bo/
+      - title: Test
+        description: Servidor de Pruebas
+        icon: hl-apache
+        url: http://192.168.200.51
+        target: modal
+        statusCheck: true
+        statusCheckUrl: http://192.168.200.51
+        id: 0_788_test
+      - title: Form101
+        description: Formulario 101 de Direccion de Mineria
+        icon: fas fa-mountain
+        url: https://form101.chuquisaca.gob.bo
         target: newtab
-        statusCheckUrl: https://chaski.chuquisaca.gob.bo/
-        id: 0_1723_chaski
-      - title: Pagos
-        description: Sistema de Seguimiento de Pagos
-        url: https://pagos.chuquisaca.gob.bo
-        target: newtab
-        statusCheckUrl: https://pagos.chuquisaca.gob.bo
-        id: 1_1723_pagos
-  - name: Aplicaciones
+        statusCheck: true
+        statusCheckUrl: https://form101.chuquisaca.gob.bo
+        id: 1_788_form
     displayData:
       sortBy: default
+      rows: 5
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+  - name: APPs Production
+    displayData:
+      sortBy: alphabetical
       rows: 1
       cols: 1
       collapsed: false
       hideForGuests: false
     items:
       - title: Pagos
-        description: Sistema de Pagos
-        url: http://192.168.200.54
-        target: modal
+        description: Sistema de Seguimiento de Pagos
+        icon: fas fa-regular fa-comments-dollar
+        url: https://pagos.chuquisaca.gob.bo
+        target: newtab
         statusCheck: true
-        id: 0_1227_pagos
+        statusCheckUrl: https://pagos.chuquisaca.gob.bo
+        id: 0_1435_pagos
       - title: SIRET
         description: Sistema Informatico de Registro de Empleo Temporal
-        url: http://192.168.200.160
-        target: modal
+        icon: fas fa-hammer
+        url: https://siret.chuquisaca.gob.bo
+        target: newtab
         statusCheck: true
-        id: 1_1227_siret
-      - title: Test
-        description: Servidor de Pruebas
-        url: http://192.168.200.51
-        target: clipboard
+        statusCheckUrl: https://siret.chuquisaca.gob.bo
+        id: 1_1435_siret
+      - title: Web GADCH
+        description: Sitio Web Institucional
+        icon: hl-wordpress
+        url: https://chuquisaca.gob.bo
+        target: newtab
         statusCheck: true
-        id: 2_1227_test
+        statusCheckUrl: https://chuquisaca.gob.bo/portal
+        id: 2_1435_webgadch
+      - title: Chat
+        description: Sistema de Mensajeria  Instantanea
+        icon: hl-rocketchat
+        url: https://chat.chuquisaca.gob.bo
+        target: newtab
+        statusCheck: true
+        statusCheckUrl: https://chat.chuquisaca.gob.bo/
+        statusCheckAllowInsecure: true
+        id: 3_1435_chat
+      - title: Cerberus
+        description: Sistema de gestion de credenciales de acceso.
+        icon: fas fa-key
+        url: http://cerberus.chuquisaca.gob.bo
+        target: newtab
+        statusCheckUrl: http://cerberus.chuquisaca.gob.bo/login
+        statusCheckAllowInsecure: true
+        id: 4_1435_cerberus
+      - title: Chaski
+        description: Sistema de Correspondencia Interna
+        icon: fas fa-inbox
+        url: https://chaski.chuquisaca.gob.bo
+        target: newtab
+        statusCheck: true
+        statusCheckUrl: https://chaski.chuquisaca.gob.bo
+        statusCheckAllowInsecure: true
+        id: 5_1435_chaski
+      - title: El Vigilante
+        description: Sistema de registo par el control de ingreso
+        icon: fas fa-door-open
+        url: https://elvigilante.chuquisaca.gob.bo
+        target: newtab
+        statusCheckUrl: https://elvigilante.chuquisaca.gob.bo/login
+        id: 6_1435_elvigilante
+      - title: ALVI
+        description: Asistente de lucha contra la violencia hacia las mujeres
+        icon: fas fa-shield
+        url: https://alvi.chuquisaca.gob.bo
+        target: newtab
+        statusCheck: true
+        statusCheckUrl: https://alvi.chuquisaca.gob.bo
+        id: 7_1435_alvi
+      - title: SIDEJU
+        description: Sistema de declaracion de Declaraciones Juradas
+        icon: fas fa-gavel
+        url: https://sideju.chuquisaca.gob.bo
+        target: newtab
+        statusCheckUrl: https://sideju.chuquisaca.gob.bo/login
+        id: 8_1435_sideju
+      - title: CASTOR
+        description: Sistema de Consualta a Almacenes
+        icon: fas fa-boxes
+        url: https://castor.chuquisaca.gob.bo
+        target: newtab
+        statusCheckUrl: https://castor.chuquisaca.gob.bo
+        id: 9_1435_castor
+      - title: Almacenes
+        description: Sistema de Gestion de Almacenes
+        icon: fas fa-clipboard
+        url: https://almacen.chuquisaca.gob.bo
+        target: newtab
+        statusCheckUrl: https://almacen.chuquisaca.gob.bo
+        id: 10_1435_almacenes
+    icon: fas fa-hand-spock fa-regular
+  - name: Redes
+    icon: fas fa-solid fa-ethernet
+    displayData:
+      sortBy: alphabetical
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: GW Planificacion
+        description: Gateway Planificacion
+        icon: fas fa-network-wired
+        url: http://172.16.1.1
+        target: newtab
+        id: 0_499_gwplanificacion
