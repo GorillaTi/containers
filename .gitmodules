@@ -13,3 +13,6 @@
 [submodule "portainer-edgeagent"]
 	path = portainer-edgeagent
 	url = git@github.com:GorillaTi/portainer-edgeagent.git
+[submodule "html-cautivo"]
+	path = html-cautivo
+	url = git@github.com:GorillaTi/html-cautivo.git
