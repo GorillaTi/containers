@@ -7,3 +7,9 @@
 [submodule "dashy"]
 	path = dashy
 	url = git@github.com:GorillaTi/dashy.git
+[submodule "portainer-agent"]
+	path = portainer-agent
+	url = git@github.com:GorillaTi/portainer_agent.git
+[submodule "portainer-edgeagent"]
+	path = portainer-edgeagent
+	url = git@github.com:GorillaTi/portainer-edgeagent.git
