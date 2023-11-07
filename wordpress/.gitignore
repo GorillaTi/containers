@@ -1,0 +1,27 @@
+# Ignorar directorios y archivos generados por WordPress
+wp-content/uploads/
+wp-content/upgrade/
+wp-content/backup-db/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+wp-content/w3tc-config/
+wp-content/wflogs/
+sitemap-*.xml
+sitemap-*.xml.gz
+
+# Ignorar archivos de configuración de WordPress
+wp-config.php
+wp-config-sample.php
+
+# Ignorar archivos y directorios generados por el servidor web
+.htaccess
+error_log
+access_log
+logs/
+logs/*
+*.log
+
+# Ignorar directorio wp_data y su contenido
+wp_data/*
