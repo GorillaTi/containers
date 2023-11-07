@@ -16,3 +16,12 @@
 [submodule "html-cautivo"]
 	path = html-cautivo
 	url = git@github.com:GorillaTi/html-cautivo.git
+[submodule "geoserver"]
+	path = geoserver
+	url = git@github.com:GorillaTi/geoserver.git
+[submodule "postgis"]
+	path = postgis
+	url = git@github.com:GorillaTi/postgis.git
+[submodule "pgadmin"]
+	path = pgadmin
+	url = git@github.com:GorillaTi/pgadmin.git
