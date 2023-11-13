@@ -9,8 +9,8 @@ services:
 
   phpmyadmin:
     image: phpmyadmin
-    restart: always
+    restart: alway
     ports:
-      - 8080:80
+      - 9002:80
     environment:
       - PMA_ARBITRARY=1
