@@ -25,3 +25,6 @@
 [submodule "pgadmin"]
 	path = pgadmin
 	url = git@github.com:GorillaTi/pgadmin.git
+[submodule "phpmyadmin"]
+	path = phpmyadmin
+	url = git@github.com:GorillaTi/phpmyadmin.git
