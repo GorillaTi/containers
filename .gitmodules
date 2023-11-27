@@ -28,3 +28,9 @@
 [submodule "phpmyadmin"]
 	path = phpmyadmin
 	url = git@github.com:GorillaTi/phpmyadmin.git
+[submodule "passbolt"]
+	path = passbolt
+	url = git@github.com:GorillaTi/passbolt.git
+[submodule "rocketchat"]
+	path = rocketchat
+	url = git@github.com:GorillaTi/rocketchat.git
